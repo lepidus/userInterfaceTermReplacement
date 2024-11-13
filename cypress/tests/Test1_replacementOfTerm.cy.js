@@ -10,7 +10,7 @@ describe('Replacement of term in user interface', function () {
         cy.contains('a', 'Finocchiaro: Arguments About Arguments').click();
 
         cy.get('.cmp_breadcrumbs').within(() => {
-            cy.contains('span', 'Home');
+            cy.contains('a', 'Home');
             cy.contains('span', 'Preprints');
         });
 
