@@ -7,3 +7,8 @@ include:
     file:
       - 'templates/groups/pkp_plugin.yml'
       - 'templates/groups/ops/cypress_tests.yml'
+
+.integration_tests_template:
+  before_script:
+    - patch cypress/fixtures/Fix_hook_translation.patch > /var/www/$CY_APPLICATION/lib/pkp/classes/i18n/Locale.php
+    - cat /var/www/$CY_APPLICATION/lib/pkp/classes/i18n/Locale.php
